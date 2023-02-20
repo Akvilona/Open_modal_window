@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css " />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- создаем класс popup-overlay -->
+    <div class="popup-overlay"></div>
+    <!-- создаем ссылку -->
+    <a href="#modal-popup" class="modal-btn">Открыть модальное окно</a>
+    <!-- создаем само popup окно -->
+    <div class="modal-popup">
+      <!-- вставляем значок крестика -->
+      <a href="#modal-close" class="popup-close">&times</a>
+      <h2>Заголовок крупно</h2>
+      <p>
+        Далеко-далеко за словесными горами в стране гласных, и согласных живут
+        рыбные тексты. Продолжил жаренные текстов сих своего обеспечивает
+        использовало, возвращайся заглавных инициал агентство текста его.
+        Агентство силуэт точках снова знаках они собрал все родного эта там.
+        Заголовок алфавит вопроса пояс необходимыми свое его осталось своего
+        коварный приставка образ маленький, переписали агентство заманивший
+        жизни которой. Повстречался власти снова запятой толку имени
+        переписывается продолжил живет? Несколько текстов рекламных текста пояс
+        по всей? Сбить от всех до заглавных? Продолжил бросил повстречался
+        предупредила своих встретил назад пояс щеке вершину несколько агентство
+        свою о, там рекламных от всех власти однажды диких путь ему. Не ведущими
+        страна, безорфографичный имеет власти первую?
+      </p>
+    </div>
+    <!-- Подключаем библиотеки JQuery -->
+    <script src="jquery.js"></script>
+    <script>
+      $(".modal-btn").click(function () {
+        $(".modal-popup").fadeIn();
+        $(".popup-overlay").fadeIn();
+      });
+      // по нажатию на крестик
+      $(".popup-close").click(function () {
+        $(".modal-popup").fadeOut();
+        $(".popup-overlay").fadeOut();
+      });
+      // по нажатию на popup-overlay
+      $(".popup-overlay").click(function () {
+        $(".modal-popup").fadeOut();
+        $(".popup-overlay").fadeOut();
+      });
+    </script>
+  </body>
+</html>
